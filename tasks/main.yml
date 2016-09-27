@@ -1,0 +1,12 @@
+---
+- name: system supported
+  set_fact:
+    supported_system: True
+  when: supported_systems[ansible_distribution] is defined and
+        ansible_distribution_major_version|int in supported_systems[ansible_distribution]
+
+- name: system not supported
+  set_fact:
+    supported_system: False
+  when: supported_systems[ansible_distribution] is not defined or
+        ansible_distribution_major_version|int not in supported_systems[ansible_distribution]
