@@ -18,6 +18,6 @@ _role_/meta/main.yml:
 dependencies:
   - role: supported-system
     supported_systems:
-      Ubuntu: [12,14,16]
+      Ubuntu: [12, 14, 16]
       Debian: [8]
 ```
